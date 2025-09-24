@@ -8,6 +8,6 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->get('/', 'StudentController::index');
 $routes->post('students/login', 'StudentController::login');
-$routes->get('/students/create', 'StudentController::create');
+$routes->get('sample/page_1', 'StudentController::page_1');
 
 

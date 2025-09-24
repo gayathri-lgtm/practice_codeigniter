@@ -1,6 +1,6 @@
 <?php
 namespace App\Controllers;
-
+use App\Model\studentmodel;
 
 
 class StudentController extends BaseController
@@ -12,13 +12,34 @@ class StudentController extends BaseController
  return view("students/index");
 }
  public function login()
+
     {
+      
+       
+       $studentModel = new \App\Models\StudentModel();
+
+  
+       $data["students"] = $studentModel->studentd(); 
      
-        $name = $this->request->getPost('name');
 
       
-        return view('students/login', ['name' => $name]);
+        return view('students/login',$data);
     }
+
+//  public function page_1()
+// {
+  
+//     $studentModel = new \App\Models\StudentModel();
+
+  
+//     $data["students"] = $studentModel->studentd(); 
+
+    
+//     return view('students/login', $data);
+// }
+
+
+
 
 
    
