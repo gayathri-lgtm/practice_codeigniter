@@ -4,6 +4,11 @@
 <div class="container mt-5">
     <div class="card shadow-lg p-4 mx-auto" style="max-width: 500px;">
         <h1 class="text-center text-primary mb-4">Fill the Form</h1>
+        <?php if (session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger">
+        <?= session()->getFlashdata('error') ?>
+    </div>
+<?php endif; ?>
 
         <?= form_open('students/index') ?>
 
@@ -39,6 +44,8 @@
 
         <?= form_close() ?>
     </div>
+    <button type="submit" class="btn btn-success w-30" >SIGNIN</button>
+    <button type="submit" class="btn btn-success w-30">SIGNUP</button>
 </div>
 
 <?=$this->endSection();?>

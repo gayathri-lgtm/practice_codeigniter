@@ -13,6 +13,11 @@
             <h1 class="text-success">Logged in successfully... </h1>
             
         </div>
+        <?php if (session()->getFlashdata('message')): ?>
+    <div class="alert alert-success">
+        <?= session()->getFlashdata('message') ?>
+    </div>
+<?php endif; ?>
 
         <!-- Card Box -->
         <div class="card shadow-lg">

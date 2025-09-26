@@ -12,7 +12,7 @@
     <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <span class="navbar-text">
-      form with valiadation
+      form with validation and saved in the database
     </span>
   </div>
 </nav>
